@@ -1,0 +1,457 @@
+@import 'variables';
+
+.progress {
+  height: 10px;
+  border-radius: 0;
+  background-color: $grey;
+  margin-bottom: 0;
+
+  .ios-ipad & {
+    margin-top: 20px;
+  }
+
+  .progress-bar {
+    background-color: $green;
+  }
+}
+
+.score-adding-adnotation {
+  color: $dark-grey;
+  font-family: inherit;
+  font-size: 10em;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  z-index: 10;
+
+  @media screen and (max-width: 460px) {
+    font-size: 7.5em;
+  }
+}
+
+.animated {
+  animation-duration: 0.8s;
+}
+
+.animated-glases {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.ng-enter, .animated.ng-leave {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.animated.ng-enter,
+.animated.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.animated.ng-leave,
+.animated.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.question {
+  color: $dark-grey;
+  font-family: $font-family;
+  line-height: 30px;
+  margin: 0 auto;
+  padding: 3% 0;
+  width: 85%;
+
+  .ios & {
+    font-family: $font-family-ios;
+    height: 140px;
+  }
+
+  @media screen and (max-width: 340px) {
+    font-size: 0.85em;
+    height: 110px;
+
+    .ios & {
+      height: 100px;
+    }
+  }
+
+  @media screen and (min-width: 341px) and (max-width: 460px) {
+    height: 150px;
+    padding-top: 5%;
+
+    .ios & {
+      height: 100px;
+    }
+  }
+
+  @media screen and (min-width: 461px) and (max-width: 539px) {
+    height: 160px;
+    padding-top: 6%;
+  }
+
+  @media screen and (min-width: 540px) {
+    font-size: 1.1em;
+    height: 90px;
+    margin-top: 1%;
+    padding-left: 5%;
+    width: 85%;
+  }
+
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    font-size: 0.85em;
+    height: 100px;
+    padding: 20px;
+    width: 100%;
+
+    .ios & {
+      height: 90px;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+    font-size: 0.9em;
+    height: 90px;
+    margin-bottom: 0;
+    padding: 15px;
+    width: 100%;
+
+    .ios & {
+      height: 90px;
+    }
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 640px) and (orientation: landscape) {
+    font-size: 0.9em;
+    height: 90px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+    font-size: 0.9em;
+    height: 80px;
+    margin-top: 0;
+    padding: 2%;
+  }
+
+  .line {
+    background-color: $light-cream;
+    border-bottom-style: solid;
+    border-color: $light-grey-line;
+    border-radius: 3px;
+    border-width: 2px;
+    color: $dark-grey;
+    display: inline-block;
+    font-family: $font-family;
+    height: 30px;
+    margin: 0 1%;
+    margin-right: 5px;
+    overflow: visible;
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: top;
+    word-break: keep-all;
+  }
+
+  .line-size-tiny {
+    width: 115px;
+
+    @media screen and (max-width: 340px) {
+      width: 95px;
+    }
+
+    @media screen and (min-width: 540px) {
+      width: 120px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      width: 95px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      width: 100px;
+    }
+
+  }
+
+  .line-size-small {
+    width: 140px;
+
+    @media screen and (max-width: 340px) {
+      width: 105px;
+    }
+
+    @media screen and (min-width: 540px) {
+      width: 130px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      width: 105px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      width: 110px;
+    }
+  }
+
+  .line-size-medium {
+    width: 160px;
+
+    @media screen and (max-width: 340px) {
+      width: 115px;
+    }
+
+    @media screen and (min-width: 540px) {
+      width: 145px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      width: 115px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      width: 120px;
+    }
+  }
+
+  .line-size-big {
+    width: 175px;
+
+    @media screen and (max-width: 340px) {
+      width: 145px;
+    }
+
+    @media screen and (min-width: 540px) {
+      width: 185px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      width: 145px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      width: 150px;
+    }
+  }
+
+  .line-size-huge {
+    width: 190px;
+
+    @media screen and (max-width: 340px) {
+      width: 160px;
+    }
+
+    @media screen and (min-width: 540px) {
+      width: 205px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      width: 160px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      width: 165px;
+    }
+  }
+}
+
+.answers {
+
+  @media screen and (min-width: 540px) {
+    align-content: center;
+    margin-top: 4%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    width: 500px;
+  }
+
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    align-content: center;
+    padding-bottom: 50px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+    align-content: center;
+    padding-bottom: 50px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 800px) and (orientation: landscape) {
+    align-content: center;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+    width: 90%;
+  }
+
+  .answers-content {
+
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      display: inline;
+    }
+
+    .answerButton,
+    .answerButton:hover,
+    .answerButton:active,
+    .highlightedAnswerButton,
+    .highlightedAnswerButton:hover,
+    .highlightedAnswerButton:active,
+    .greenAnswerButton,
+    .greenAnswerButton:hover,
+    .greenAnswerButton:active,
+    .redAnswerButton,
+    .redAnswerButton:hover,
+    .redAnswerButton:active {
+      margin-bottom: 3%;
+      width: 85%;
+      height: 60px;
+      font-family: $font-family;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+
+      .ios & {
+        font-family: $font-family-ios;
+        font-weight: 900;
+      }
+
+      @media screen and (max-width: 340px) {
+        font-size: 0.85em;
+        height: 50px;
+        margin-bottom: 3%;
+      }
+
+      @media screen and (max-width: 480px) and (orientation: landscape) {
+        height: 40px;
+        margin-bottom: 1%;
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+        height: 50px;
+        margin-bottom: 1%;
+      }
+
+      @media screen and (min-width: 541px) and (max-width: 640px) and (orientation: landscape) {
+        height: 50px;
+        margin-bottom: 1%;
+      }
+
+      @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+        height: 50px;
+        margin-bottom: 1%;
+      }
+    }
+
+    .answerButton,
+    .answerButton:hover,
+    .answerButton:active {
+      color: $dark-grey;
+      background-color: $white;
+      border-color: $grey;
+      border-style: solid;
+      border-width: thin;
+
+      @media screen and (min-width: 640px) {
+        margin-bottom: 3%;
+      }
+
+      @media screen and (max-width: 480px) and (orientation: landscape) {
+        font-size: 0.85em;
+        width: 48%;
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+        font-size: 0.9em;
+        width: 48%;
+      }
+
+      @media screen and (min-width: 541px) and (max-width: 640px) and (orientation: landscape) {
+        font-size: 0.9em;
+        width: 48%;
+      }
+
+      @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+        font-size: 0.9em;
+        width: 48%;
+      }
+    }
+
+    .highlightedAnswerButton,
+    .highlightedAnswerButton:hover,
+    .highlightedAnswerButton:active {
+      background-color: $dark-grey;
+      color: $light-grey;
+    }
+
+    .greenAnswerButton,
+    .greenAnswerButton:hover,
+    .greenAnswerButton:active {
+      background-color: $green;
+      color: $light-grey;
+    }
+
+    .redAnswerButton,
+    .redAnswerButton:hover,
+    .redAnswerButton:active {
+      background-color: $red;
+      color: $light-grey;
+    }
+  }
+}
+
+.definition-image-glasses {
+  width: 15%;
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  z-index: 1;
+  animation-duration: 1.5s;
+
+  @media screen and (max-width: 539px) {
+    width: 30%;
+  }
+
+  @media screen and (min-width: 540px) {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 799px) and (orientation: landscape) {
+    width: 15%;
+  }
+
+  @media screen and (min-width: 800px) and (orientation: landscape) {
+    width: 10%;
+  }
+}
+
+.button-bottom {
+  @media screen and (max-width: 340px) {
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+    height: 50px;
+    margin: 0 auto;
+  }
+}
+
+

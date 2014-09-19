@@ -1,0 +1,36 @@
+<div class="bar bar-header headline">
+    <div ng-include src="'views/back.html'"></div>
+    <div class="headline-title">
+        Definition
+    </div>
+</div>
+
+<div class="definition-image-content">
+    <img ng-src="{{DefinitionCtrl.checking.feedbackMessage.img}}" class="definition-image">
+</div>
+
+<div class="definition-word-content">
+    <button class="audio-button"
+            ng-click="DefinitionCtrl.media.playSound(DefinitionCtrl.checking.feedbackMessage.sound)">
+        <img class="icon-sound"
+             src="images/glosnik.png"/>
+        <div class="word-name">
+            {{DefinitionCtrl.checking.feedbackMessage.chosenWord}}
+        </div>
+    </button>
+</div>
+
+<div class="definition-text-content">
+    <div class="definition-word">Definition</div>
+    <div class="definition-text">
+        {{DefinitionCtrl.checking.feedbackMessage.definition}}
+    </div>
+</div>
+
+<div class="button-bar button-bottom"
+     ng-show="!DefinitionCtrl.device.isIOS()">
+    <a class="button next-finish-button"
+       ng-href="#/task">
+        <div class="center">Back</div>
+    </a>
+</div>

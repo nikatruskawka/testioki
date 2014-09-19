@@ -1,2 +1,2 @@
-testioki
-========
+ToDo
+simple angular ToDo list

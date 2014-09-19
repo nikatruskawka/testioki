@@ -1,0 +1,104 @@
+@import 'variables';
+
+.game-graphic {
+
+  @media screen and (min-width: 540px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 800px) and (orientation: landscape) {
+    width: 40%;
+    float: left;
+  }
+
+  .monster-game {
+    height: 130px;
+
+    @media screen and (min-width: 341px) and (max-width: 540px) {
+      margin-bottom: 2%;
+    }
+
+    @media screen and (min-width: 540px) {
+      height: 200px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      height: 180px;
+      margin: 20px 0;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      height: 200px;
+      margin: 20px 0;
+    }
+
+    .monster-game-image {
+      height: 90%;
+      top: 5%;
+
+      @media screen and (min-width: 340px) and (max-width: 540px) {
+        margin-top: 3%;
+      }
+    }
+  }
+}
+
+.game-buttons {
+
+  @media screen and (min-width: 540px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 800px) and (orientation: landscape) {
+    margin-top: 15% !important;
+    width: 60%;
+    float: right;
+  }
+
+  .game-button,
+  .game-button:active,
+  .game-button:hover,
+  .not-active-game,
+  .not-active-game:active,
+  .not-active-game:hover {
+    margin-top: 2%;
+    font-weight: bold;
+    font-family: $font-family;
+    font-size: 20px;
+    width: 85%;
+    height: 60px;
+    border: none;
+    color: $light-grey;
+    border-radius: 3px;
+
+    .ios & {
+      font-family: $font-family-ios;
+      font-weight: 900;
+    }
+
+    @media screen and (max-width: 340px) {
+      height: 50px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      height: 50px;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+      margin: 1%;
+    }
+  }
+
+  .game-button,
+  .game-button:active,
+  .game-button:hover {
+    background-color: $deep-orange;
+  }
+
+  .not-active-game,
+  .not-active-game:active,
+  .not-active-game:hover {
+    background-color: $cream;
+  }
+}

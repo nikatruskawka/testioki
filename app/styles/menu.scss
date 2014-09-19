@@ -1,0 +1,121 @@
+@import 'variables';
+
+.menu-graphic {
+
+  @media screen and (min-width: 540px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 800px) and (orientation: landscape) {
+    width: 40%;
+    float: left;
+  }
+
+  .monster-menu {
+    height: 130px;
+
+    @media screen and (min-width: 341px) and (max-width: 540px) {
+      margin-bottom: 2%;
+    }
+
+    @media screen and (min-width: 540px) {
+      height: 200px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      height: 180px;
+      margin: 20px 0;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      height: 200px;
+      margin: 20px 0;
+    }
+
+    .monster-menu-image {
+      height: 90%;
+      top: 5%;
+
+      @media screen and (max-width: 340px) {
+        margin-top: 3%;
+      }
+
+      @media screen and (min-width: 341px) and (max-width: 540px) {
+        margin-top: 3%;
+      }
+    }
+  }
+}
+
+.menu-buttons {
+
+  @media screen and (min-width: 540px) {
+    width: 60%;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 540px) and (orientation: landscape) {
+    margin-top: 2% !important;
+    width: 60%;
+    float: right;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 640px) and (orientation: landscape) {
+    margin-top: 3% !important;
+    width: 60%;
+    float: right;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+    margin-top: 5% !important;
+    width: 60%;
+    float: right;
+  }
+
+  .menu-button,
+  .menu-button:active,
+  .menu-button:hover,
+  .not-active-menu,
+  .not-active-menu:hover,
+  .not-active-menu:active {
+    border: none;
+    border-radius: 3px;
+    color: $light-cream;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: bold;
+    height: 60px;
+    margin-top: 2%;
+    width: 85%;
+
+    .ios & {
+      font-family: $font-family-ios;
+      font-weight: 900;
+    }
+
+    @media screen and (max-width: 340px) {
+      height: 50px;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      height: 50px;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+      margin: 1%;
+    }
+  }
+
+  .menu-button,
+  .menu-button:active,
+  .menu-button:hover {
+    background-color: $deep-orange;
+  }
+
+  .not-active-menu,
+  .not-active-menu:hover,
+  .not-active-menu:active {
+    background-color: $cream;
+  }
+}

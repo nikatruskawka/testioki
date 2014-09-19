@@ -1,0 +1,118 @@
+@import 'variables';
+
+.definition-image-content {
+
+  @extend .center;
+
+  .definition-image {
+    border-radius: 3px;
+    margin: 3% 0;
+    max-height: 50%;
+    max-width: 95%;
+  }
+
+  @media screen and (orientation: landscape) {
+    @media screen and (max-width: 800px) {
+      float: left;
+      height: 50%;
+      padding-top: 0;
+      position: relative;
+      top: 15%;
+      width: 50%;
+
+      .definition-image {
+        margin: 0;
+        max-height: 100%;
+        max-width: 85%;
+      }
+    }
+  }
+}
+
+.definition-text-content {
+
+  margin: 2% 0 0 3%;
+  width: 95%;
+
+  .definition-word {
+    color: $dark-grey;
+    font-size: $font-size-large;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  .definition-text {
+    color: $dark-grey;
+    font-size: $font-size-large;
+  }
+
+  @media screen and (orientation: portrait) {
+    @media screen and (max-width: 340px) {
+      .definition-text, .definition-word {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+  @media screen and (orientation: landscape) {
+    @media screen and (max-width: 540px) {
+      .definition-text, .definition-word {
+        font-size: $font-size-medium;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      bottom: 20%;
+      float: right;
+      margin: 2% 0 3% 5%;
+      padding: 0 15px 0 10px;
+      position: relative;
+      width: 50%;
+
+    }
+  }
+}
+
+.definition-word-content {
+
+  @extend .center;
+
+  @media screen and (orientation: portrait) {
+    @media screen and (min-width: 541px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    @media screen and (max-width: 480px) {
+      float: right;
+      position: relative;
+      top: 10%;
+      width: 50%;
+    }
+    @media screen and (min-width: 481px) and (max-width: 800px) {
+      float: right;
+      position: relative;
+      top: 15%;
+      width: 50%;
+    }
+  }
+
+  .audio-button {
+    border: none;
+    border-radius: 3px;
+    background-color: $dark-grey;
+    height: 50px;
+    width: 95%;
+  }
+  .word-name {
+    color: $white;
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .icon-sound {
+    height: 40%;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}

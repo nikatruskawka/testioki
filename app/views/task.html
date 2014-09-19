@@ -1,0 +1,100 @@
+<div class="bar bar-header headline">
+    <div ng-include src="'views/back.html'"></div>
+    <div class="headline-title">
+        {{TaskCtrl.checking.currentUnitName}}
+    </div>
+</div>
+
+<progressbar value="TaskCtrl.checking.progressBarScore"
+             max="TaskCtrl.checking.progressBarTotal">
+</progressbar>
+
+<div class="score-adding-adnotation">
+    <div class="animated rubberBand"
+         ng-if="TaskCtrl.checking.isChecked && TaskCtrl.tasksContent.sentence.done && TaskCtrl.tasksContent.sentence.firstAttempt">
+        +10
+    </div>
+    <div class="animated rubberBand"
+         ng-if="TaskCtrl.checking.isChecked && TaskCtrl.tasksContent.sentence.done && !TaskCtrl.tasksContent.sentence.firstAttempt">
+        +5
+    </div>
+    <div class="animated shake"
+         ng-if="TaskCtrl.checking.isChecked && !TaskCtrl.tasksContent.sentence.done">
+        X
+    </div>
+</div>
+
+<div class="content-padding">
+    <div class="question animated fadeIn">
+        {{TaskCtrl.tasksContent.sentence.part1}}
+        <div class="line line-size-tiny"
+             ng-if="TaskCtrl.tasksContent.gapSize === 'tiny'">
+            {{TaskCtrl.checking.currentWord}}
+        </div>
+        <div class="line line-size-small"
+             ng-if="TaskCtrl.tasksContent.gapSize === 'small'">
+            {{TaskCtrl.checking.currentWord}}
+        </div>
+        <div class="line line-size-medium"
+             ng-if="TaskCtrl.tasksContent.gapSize === 'medium'">
+            {{TaskCtrl.checking.currentWord}}
+        </div>
+        <div class="line line-size-big"
+             ng-if="TaskCtrl.tasksContent.gapSize === 'big'">
+            {{TaskCtrl.checking.currentWord}}
+        </div>
+        <div class="line line-size-huge"
+             ng-if="TaskCtrl.tasksContent.gapSize === 'huge'">
+            {{TaskCtrl.checking.currentWord}}
+        </div>
+        {{TaskCtrl.tasksContent.sentence.part2}}
+    </div>
+
+    <div class="answers center animated fadeIn">
+        <ul>
+            <div ng-repeat="answer in TaskCtrl.tasksContent.answers" class="answers-content">
+                <button ng-class="{answerButton: 1, highlightedAnswerButton: answer.isHighlighted}"
+                        ng-click="TaskCtrl.checking.chooseAnswer(answer)" ng-if="!TaskCtrl.checking.isChecked">
+                    {{answer.name}}
+                </button>
+                <button ng-class="{answerButton: 1, greenAnswerButton: answer.isHighlighted}"
+                        ng-if="TaskCtrl.checking.isCorrect && TaskCtrl.checking.isChecked">
+                    {{answer.name}}
+                </button>
+                <button ng-class="{answerButton: 1, redAnswerButton: answer.isHighlighted}"
+                        ng-if="!TaskCtrl.checking.isCorrect && TaskCtrl.checking.isChecked">
+                    {{answer.name}}
+                </button>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<a ng-if="TaskCtrl.checking.isChosen"
+   ng-href="#/definition">
+    <img ng-class="{'definition-image-glasses': 1, 'animated-glasses tada': TaskCtrl.animation.animation}"
+         src="images/Hipster_glasses_definition.png">
+</a>
+
+<a ng-if="!TaskCtrl.checking.isChosen">
+    <img ng-class="{'definition-image-glasses': 1}"
+         src="images/Hipster_glasses_definition.png">
+</a>
+
+<div class="button-bar button-bottom">
+    <a class="button definition-button"
+       ng-href="#/definition"
+       ng-if="TaskCtrl.checking.isChosen">Definition</a>
+
+    <a class="button definition-not-active-button"
+       ng-if="!TaskCtrl.checking.isChosen">Definition</a>
+
+    <a class="button next-finish-button"
+       ng-href="#/task"
+       ng-if="!(TaskCtrl.tasksContent.isSummary() && TaskCtrl.checking.isCorrect)"
+       ng-click="TaskCtrl.changeState();">Next</a>
+
+    <a class="button next-finish-button"
+       ng-if="TaskCtrl.tasksContent.isSummary() && TaskCtrl.checking.isCorrect"
+       ng-click="TaskCtrl.changeState(); TaskCtrl.goToSummary();">Next</a>
+</div>

@@ -1,0 +1,247 @@
+@import 'task';
+@import 'definition';
+@import 'summary';
+@import 'toc';
+@import 'menu';
+@import 'variables';
+@import "tutorial";
+@import 'game';
+@import "goBackModal";
+@import "testioki";
+
+body {
+  background-color: white;
+  font-family: $font-family;
+  font-size: 20px;
+  padding-top: 37px;
+}
+
+.ios {
+  font-family: $font-family-ios;
+}
+
+.container {
+  background-color: white;
+  height: 100%;
+  padding: 0;
+  padding-bottom: 80px;
+
+  @media screen and (min-width: 992px) {
+    width: 800px !important;
+  }
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.back-button {
+  background-color: transparent;
+  border-style: none;
+  color: gray;
+  font-size: 20px;
+  font-family: $font-family-ios;
+  position: fixed;
+  word-wrap: normal;
+}
+
+.headline {
+  background-color: $dark-grey;
+
+  .ios & {
+    padding: 10px 0 0 0;
+    text-align: center;
+  }
+
+  .headline-title {
+    color: $white;
+    font-size: 20px;
+    min-width: 200px;
+    padding-left: 5px;
+    padding-top: 7px;
+    width: auto;
+
+    .ios & {
+      font-weight: bolder;
+      margin: 0 auto;
+      min-width: 0px;
+      padding-top: 4px;
+      width: 50em;
+
+      @media screen and (max-width: 540px) {
+        width: 10em;
+      }
+    }
+  }
+
+  .logo-image {
+    height: 20px;
+    line-height: 35px;
+    vertical-align: middle;
+  }
+
+  .logo-position {
+    height: 35px;
+    left: 8px;
+    line-height: 30px;
+    position: fixed;
+    vertical-align: middle;
+    width: auto;
+  }
+
+}
+
+.logo-app-image {
+  padding-top: 6%;
+  position: relative;
+  width: 70%;
+
+  @media screen and (max-width: 340px) {
+    padding-top: 3%;
+    width: 50%;
+  }
+
+  @media screen and (min-width: 540px) {
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 540px) and (orientation: landscape) {
+    padding: 12% 0 0 8%;
+    position: relative;
+    width: 90%;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 640px) and (orientation: landscape) {
+    padding: 10% 0 0 8%;
+    position: relative;
+    width: 90%;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+    padding: 12% 0 0 8%;
+    position: relative;
+    width: 90%;
+  }
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.definition-button, .definition-button:hover {
+  background-color: $deep-orange !important;
+}
+
+.definition-not-active-button,
+.definition-not-active-button:hover {
+  background-color: $light-orange !important;
+}
+
+.next-finish-button,
+.next-finish-button:hover,
+.next-finish-button:active {
+  background-color: $orange;
+}
+
+.definition-button,
+.definition-button:hover,
+.definition-button:active,
+.next-finish-button,
+.next-finish-button:hover,
+.next-finish-button:active,
+.definition-not-active-button,
+.definition-not-active-button:hover,
+.definition-not-active-button:active {
+  border: none;
+  color: $white;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: bold;
+
+  .ios & {
+    font-family: $font-family-ios;
+  }
+
+  @media screen and (max-width: 340px) {
+    font-size: 0.85em;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+
+  @media screen and (min-width: 600px) {
+    font-size: 1.1em;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+  }
+
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    font-size: 0.85em;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+    font-size: 0.9em;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 800px) and (orientation: landscape) {
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+  }
+}
+
+.button-bottom {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+
+  @media screen and (max-width: 540px) and (orientation: landscape) {
+    height: 40px;
+    margin: 0 auto;
+  }
+}
+
+.monster-image {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.scroll {
+  height: 100%;
+  margin-bottom: 10px;
+  overflow-y: overlay;
+  overflow-x: hidden;
+
+  .ios-ipad & {
+    margin-top: 20px;
+  }
+}
+
+.touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+.unit-number {
+
+  @media screen and (max-width: 340px) {
+    margin-left: 25px;
+  }
+}
+
+.toc_unit {
+
+  @media screen and (min-width: 341px) and (max-width: 540px) {
+    padding-left: 5%;
+  }
+}

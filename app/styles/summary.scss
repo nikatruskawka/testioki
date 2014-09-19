@@ -1,0 +1,187 @@
+@import 'variables';
+@import "../bower_components/orbicular/orbicular.scss";
+
+.bar-resize {
+  height: 2px;
+  padding: 2px;
+  background-color: $orange;
+  border-bottom: 0;
+  top: 44px;
+
+  .ios-ipad & {
+    margin-top: 20px;
+  }
+}
+
+.wrapper-summary {
+
+  .score-message {
+    animation-delay: 3s;
+    margin: 0 auto;
+    padding-top: 1em;
+    font-size: $font-size-large*1.5;
+    color: $deep-orange;
+    text-align: center;
+
+    @media screen and (max-width: 340px) {
+      font-size: $font-size-medium*1.5;
+    }
+
+    @media screen and (max-width: 480px) and (orientation: landscape) {
+      font-size: $font-size-medium*1.5;
+    }
+  }
+
+  .circle {
+    height: auto;
+    margin: 0 auto;
+    padding-top: 3%;
+    width: 35%;
+
+    @media screen and (max-width: 340px) {
+      width: 35%;
+    }
+
+    @media screen and (orientation: landscape) {
+      padding: 0;
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      margin: -20% 0 0 0;
+    }
+
+    @media screen and (max-height: 400px) and (min-width: 481px) and (max-width: 800px) and (orientation: landscape) {
+      width: 27%;
+      margin: -18% 0 0 0;
+    }
+  }
+}
+
+.hipster-score {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  height: 50%;
+  text-align: center;
+
+  @media screen and (max-width: 340px) {
+    bottom: 85px;
+    height: 35%;
+  }
+
+  @media screen and (min-width: 540px) {
+    bottom: 110px;
+  }
+
+  @media screen and (orientation: landscape) {
+    left: 5%;
+    height: 70%;
+    bottom: 100px;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 540px) and (orientation: landscape) {
+    height: 50%;
+    bottom: 85px;
+  }
+
+
+  @media screen and (min-width: 541px) and (max-width: 800px) and (orientation: landscape) {
+    height: 60%;
+    bottom: 100px;
+  }
+
+  // for iPhone 5
+
+  @media screen and (max-height: 400px) and (min-width: 481px) and (max-width: 540px) and (orientation: landscape) {
+    height: 50%;
+    bottom: 85px;
+  }
+
+  @media screen and (max-height: 400px) and (min-width: 541px) and (max-width: 640px) and (orientation: landscape) {
+    height: 50%;
+    bottom: 100px;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.try-again-button-bottom {
+  bottom: 55px;
+  position: absolute;
+  right: 0;
+
+  @media screen and (max-width: 340px) {
+    bottom: 40px;
+  }
+
+  @media screen and (min-width: 341px) {
+    bottom: 47px;
+  }
+
+  @media screen and (max-width: 540px) and (orientation: landscape) {
+    bottom: 40px;
+  }
+
+  @media screen and (min-width: 541px) and (orientation: landscape) {
+    bottom: 47px;
+  }
+
+
+  .try-again-button,
+  .try-again-button:hover,
+  .try-again-button:active {
+    background-color: $dark-grey !important;
+    border: none;
+    color: $white;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: bold;
+    height: 55px;
+    line-height: 55px;
+
+    @media screen and (max-width: 340px) {
+      height: 40px;
+      line-height: 40px;
+      min-height: 40px;
+    }
+
+    @media screen and (min-width: 341px) and (max-width: 480px) {
+      height: 47px;
+      line-height: 47px;
+      min-height: 47px;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 640px) {
+      height: 47px;
+      line-height: 47px;
+      min-height: 47px;
+    }
+
+    @media screen and (max-width: 540px) and (orientation: landscape) {
+      height: 40px;
+      line-height: 40px;
+      min-height: 40px;
+    }
+
+    .ios & {
+      font-family: $font-family-ios;
+      font-weight: 900;
+    }
+  }
+}
+
+@include orbicular(
+  $barColor:  $orange,         // The completed progress color
+  $barBg:     $grey,           // The remaining progress color
+  $barWidth:  8,               // The bar width is defined as a percentage of the width of the circle
+  $contentBg: $light-cream,    // The circle center
+  $fontSize:  15,              // Content font-size as a percentage of the circle size
+  $fontColor: $dark-grey,      // Content text color
+  $transTime: 1s,              // Time to animate the movement
+  $transFunc: linear,          // transition timing
+  $shadow: 0px 0px 0px rgba(0,0,0,0.2)  // optional shadow (not default)
+);

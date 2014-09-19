@@ -1,0 +1,63 @@
+@import "variables";
+
+.ngdialog.ngdialog-theme-default {
+  padding-bottom: 0;
+  padding-top: 250px;
+
+  @media screen and (max-width: 340px) {
+    padding-top: 120px;
+  }
+
+  @media screen and (min-width: 341px) and (max-width: 460px) {
+    padding-top: 180px;
+  }
+
+  @media screen and (min-width: 461px) and (max-width: 580px) {
+    padding-top: 55px;
+  }
+
+  @media screen and (min-width: 581px) and (max-width: 740px) {
+    padding-top: 65px;
+  }
+
+  .ngdialog-content {
+
+    background-color: $white;
+    padding: 0;
+    width: 90%;
+    max-width: 400px;
+
+    .ngdialog-message {
+      font-family: $font-family;
+      text-align: center;
+      color: $dark-grey;
+      padding-top: 15%;
+      margin: 0;
+
+      .ngdialog-buttons {
+        padding-top: 15%;
+
+        .ngdialog-button {
+          width: 50%;
+          height: 60px;
+          color: $white;
+          font-size: 1em;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+#modal-confirm-button {
+  border-radius: 0 0 0 4px;
+  float: left;
+  background-color: $deep-orange;
+}
+
+#modal-close-button {
+  border-radius: 0 0 4px 0;
+  float: right;
+  background-color: $dark-grey;
+}
+

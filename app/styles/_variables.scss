@@ -1,0 +1,57 @@
+$icon-font-path: "/styles";
+$icon-font-roboto: $icon-font-path + "/Roboto.ttf";
+$icon-font-roboto-light: $icon-font-path + "/Roboto-Light.ttf";
+$icon-font-helvetica: $icon-font-path + "/Helvetica Neue UltraLight.otf";
+
+@font-face {
+  font-family: "Roboto";
+  src: url($icon-font-roboto);
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url($icon-font-roboto-light);
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url($icon-font-helvetica);
+  font-style: normal;
+  font-weight: 100;
+}
+
+$font-family: 'Roboto';
+$font-family-ios: 'Helvetica Neue';
+$font-family-light: 'Roboto-Light';
+$font-size-large: 1.1em;
+$font-size-medium: 0.85em;
+
+$white: #ffffff;
+$black: #000000;
+
+$light-cream: #f2eada;
+$cream: #f5d18e;
+
+$orange: #fcaa1a;
+$deep-orange: #f57423;
+$light-orange: #eec0a3;
+
+$green: #c1d62f;
+$red: #ed1a3b;
+
+$product-grey: #404040;
+$tutorial-grey: #5A5951;
+$dark-grey: #595a52;
+$middle-grey: #9E9996;
+$inactive-unit-text: #BCBCBC;
+$light-grey-line: #BFB9AC;
+$grey: #E1DCD9;
+$toc-unit-grey: #E3DBCF;
+$inactive-unit: #ede6de;
+$light-middle-grey: #eaeaea;
+$toc-product-grey: #F2EADA;
+$light-grey: #f1f1f1;
+
+$light-violet: #7f4f7c;
+$violet: #671e62;
+

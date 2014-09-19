@@ -1,0 +1,306 @@
+@import 'variables';
+
+.container {
+  margin-top: 7px;
+}
+
+.panel-group {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+
+  .panel + .panel {
+    margin-top: 0;
+  }
+
+  .panel-heading, .panel-heading:hover {
+    padding: 0;
+
+    .panel-title {
+      background-color: $white;
+      height: 100px;
+
+      @media screen and (max-width: 340px) {
+        height: 80px;
+      }
+
+      div {
+        display: inline;
+      }
+
+      .accordion-toggle, .accordion-toggle:hover {
+        height: 100px;
+        position: absolute;
+        text-decoration: none;
+        width: 100%;
+        background-color: $toc-product-grey;
+
+        @media screen and (max-width: 340px) {
+          height: 80px;
+        }
+        .product, .product:hover {
+          background-color: $white;
+          color: $dark-grey;
+          font-size: 20px;
+          vertical-align: middle;
+
+          .logo {
+            border-radius: 4px;
+            float: left;
+            height: 76px;
+            margin: 12px 0 12px 10px;
+            vertical-align: middle;
+
+            @media screen and (max-width: 340px) {
+              height: 60px;
+              width: 60px;
+              margin: 10px 0 10px 5px;
+              vertical-align: middle;
+            }
+
+            @media screen and (min-width: 341px) and (max-width: 460px) {
+              height: 70px;
+              width: 70px;
+              margin: 15px 0 15px 10px;
+              vertical-align: middle;
+            }
+          }
+
+          .product-name-part1 {
+            color: $product-grey;
+            float: left;
+            margin-left: 10px;
+            margin-top: 21px;
+            font-size: 26px;
+            font-weight: 400;
+
+            @media screen and (max-width: 340px) {
+              font-size: 22px;
+              margin-top: 16px;
+            }
+
+            @media screen and (min-width: 341px) and (max-width: 460px) {
+              font-size: 24px;
+              margin-top: 24px;
+            }
+          }
+
+          .product-name-part2 {
+            display: block;
+            padding-top: 5px;
+            font-size: 22px;
+
+            @media screen and (max-width: 340px) {
+              font-size: 18px;
+            }
+
+            @media screen and (min-width: 341px) and (max-width: 460px) {
+              font-size: 20px;
+            }
+          }
+
+          .unit-number {
+            line-height: 100px;
+            position: absolute;
+            right: 94px;
+            font-size: 23px;
+            font-weight: 900;
+
+            @media screen and (max-width: 340px) {
+              font-size: 15px;
+              line-height: 80px;
+              right: 52px;
+            }
+
+            @media screen and (min-width: 341px) and (max-width: 460px) {
+              font-size: 18px;
+              right: 60px;
+            }
+
+            @media screen and (min-width: 461px) and (max-width: 580px) {
+              font-size: 20px;
+              right: 96px;
+            }
+
+            @media screen and (min-width: 581px) and (max-width: 740px) {
+              font-size: 22px;
+              right: 95px;
+            }
+
+          }
+
+          .icon-progress {
+
+            #small-arc {
+              position: absolute;
+              right: 30px;
+              top: 9px;
+
+              @media screen and (min-width: 341px) {
+                display: none;
+              }
+            }
+
+            #medium-arc {
+              position: absolute;
+              right: 36px;
+              top: 13px;
+
+              @media screen and (max-width: 340px) {
+                display: none;
+              }
+
+              @media screen and (min-width: 461px) {
+                display: none;
+              }
+            }
+
+            #big-arc {
+              position: absolute;
+              right: 70px;
+              top: 10px;
+
+              @media screen and (max-width: 460px) {
+                display: none;
+              }
+            }
+          }
+
+          .ios & {
+            font-family: $font-family-ios;
+            font-weight: 900;
+          }
+        }
+
+        .product-arrow {
+          position: absolute;
+          width: 12px;
+          height: 11px;
+          margin-top: 44px;
+          right: 38px;
+
+          @media screen and (max-width: 340px) {
+            margin-top: 34px;
+            right: 10px;
+          }
+
+          @media screen and (min-width: 341px) and (max-width: 460px) {
+            margin-top: 44px;
+            right: 13px;
+          }
+
+          @media screen and (min-width: 461px) and (max-width: 580px) {
+            margin-top: 45px;
+            right: 40px;
+          }
+
+          @media screen and (min-width: 581px) and (max-width: 740px) {
+            margin-top: 46px;
+            right: 38px;
+          }
+        }
+      }
+    }
+  }
+
+  .panel-body {
+    padding: 0;
+
+    .panel-in {
+      width: 100%;
+      display: inline;
+    }
+
+    .toc_unit, .toc_unit_inactive {
+      background-color: $toc-unit-grey;
+      border-bottom: 1px solid #c9c9c9;
+      color: $dark-grey;
+      font-family: $font-family;
+      font-size: 23px;
+      height: 65px;
+      line-height: 65px;
+      vertical-align: middle;
+      width: 100%;
+      padding-left: 5%;
+      font-weight: 900;
+
+      @media screen and (max-width: 340px) {
+        font-size: 15px;
+        height: 50px;
+        line-height: 50px;
+      }
+
+      @media screen and (min-width: 341px) and (max-width: 460px) {
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: 461px) and (max-width: 580px) {
+        font-size: 20px;
+      }
+
+      @media screen and (min-width: 581px) and (max-width: 740px) {
+        font-size: 22px;
+      }
+
+      .max-score {
+        float: right;
+        font-family: $font-family;
+        font-size: 23px;
+        margin-right: 12%;
+        vertical-align: middle;
+        right: 47px;
+
+        @media screen and (max-width: 340px) {
+          font-size: 15px;
+        }
+
+        @media screen and (min-width: 341px) and (max-width: 460px) {
+          font-size: 18px;
+        }
+
+        @media screen and (min-width: 461px) and (max-width: 580px) {
+          font-size: 20px;
+        }
+
+        @media screen and (min-width: 581px) and (max-width: 740px) {
+          font-size: 22px;
+        }
+
+        .ios & {
+          font-family: $font-family-ios;
+          font-weight: 900;
+        }
+      }
+
+      .unit-arrow {
+        height: 14px;
+        margin-top: 26px;
+        position: absolute;
+        right: 4%;
+
+        @media screen and (max-width: 340px) {
+          height: 10px;
+          margin-top: 20px;
+        }
+      }
+
+      .ios & {
+        font-family: $font-family-ios;
+        font-weight: 900;
+      }
+    }
+
+    .toc_unit:active {
+      background-color: $grey;
+    }
+
+    .toc_unit_inactive {
+      background-color: $inactive-unit;
+      color: $inactive-unit-text;
+
+      .unit-arrow {
+        display: none;
+      }
+    }
+  }
+}

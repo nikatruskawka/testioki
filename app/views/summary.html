@@ -1,0 +1,53 @@
+<div class="bar bar-header headline">
+    <div ng-include src="'views/back.html'"></div>
+    <div class="headline-title">
+        Summary
+    </div>
+</div>
+<div class="bar bar-resize"></div>
+
+<div class="wrapper-summary">
+    <div class="score-message animated pulse">
+        <div ng-if="SummaryCtrl.checking.scoreImage == 2">Excellent!</div>
+        <div ng-if="SummaryCtrl.checking.scoreImage == 1">Well done.</div>
+        <div ng-if="SummaryCtrl.checking.scoreImage == 0">Not bad.</div>
+    </div>
+
+    <div class="circle">
+        <orbicular class="orb"
+                   progression="SummaryCtrl.checking.pointsCurrent"
+                   total="SummaryCtrl.tasksContent.maxState * 10"
+                   resize>
+            {{ SummaryCtrl.checking.pointsCurrent }}/{{ SummaryCtrl.tasksContent.maxState * 10 }}
+        </orbicular>
+    </div>
+
+    <div class="hipster-score">
+        <img src="images/hipster_excellent.png"
+             ng-if="SummaryCtrl.checking.scoreImage == 2">
+        <img src="images/hipster_well.png"
+             ng-if="SummaryCtrl.checking.scoreImage == 1">
+        <img src="images/hipster_notwell.png"
+             ng-if="SummaryCtrl.checking.scoreImage == 0">
+    </div>
+
+    <div class="button-bar try-again-button-bottom"
+         ng-click="SummaryCtrl.setTryAgain();">
+        <a class="button try-again-button"
+           ng-href="#/task">
+            Try again?
+        </a>
+    </div>
+
+    <div class="button-bar button-bottom"
+         ng-click="SummaryCtrl.setStartState();">
+        <a class="button definition-button"
+           ng-href="#/toc">
+            Product List
+        </a>
+        <a class="button next-finish-button"
+           ng-href="#/task">
+            Next Unit
+        </a>
+    </div>
+</div>

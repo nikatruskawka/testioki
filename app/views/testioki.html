@@ -1,0 +1,48 @@
+<div class="bar bar-header myHeadline">
+    <p class="myHeadlieTitle">Views from your holidays</p>
+</div>
+<div class="scroll touch">
+    <div ng-controller="MasonryCtrl">
+        <h2 class="topList">Top galleries:</h2>
+
+        <div class="center gallery-container">
+            <h2>Lake</h2>
+
+            <div class="gallery animated fadeIn" ng-repeat="item in photos.items | limitTo:4 | orderBy: 'date_taken' | orderBy: 'published'">
+                <a ng-href="{{ item.media.m }}"><img ng-src="{{ item.media.m }}"/></a>
+            </div>
+        </div>
+
+
+        <div class="center gallery-container">
+            <h2>Mountains</h2>
+            <div class="gallery animated fadeIn" ng-repeat="item in photos2.items | limitTo:4 | orderBy: 'date_taken' | orderBy: 'published'">
+                <a ng-href="{{ item.media.m }}"><img ng-src="{{ item.media.m }}"/></a>
+            </div>
+        </div>
+
+        <h3>What are you looking for?</h3>
+
+        <div class="popular-tag-content">
+            <div class="popular-tag center" ng-repeat="popular in tagList">
+                <button ng-click="yourGallery=true; getGallery(popular.name)">{{popular.name}}</button>
+            </div>
+        </div>
+        <div class="searchContent">
+            <input ng-model="tag">
+            <button ng-click="yourGallery=true; getGallery(tag)">find it!</button>
+        </div>
+        <div ng-show="yourGallery">
+
+            <button ng-click="yourGallery=false">close</button>
+            <h2>{{tag}}</h2>
+
+            <div class="gallery animated fadeIn" ng-repeat="item in photos3.items | limitTo:4 | orderBy: 'date_taken' | orderBy: 'published'">
+
+                <a ng-href="{{ item.media.m }}"><img ng-src="{{ item.media.m }}"/></a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
